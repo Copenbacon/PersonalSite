@@ -21,7 +21,7 @@ class Entry(models.Model):
 	title = models.CharField(max_length=128)
 	text = models.TextField(blank=True)
 	created_date = models.DateTimeField(auto_now_add=True)
-	author = models.ForeignKey(User, on_delete=models.CASCADE)
+	author = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
 	description = models.CharField(max_length=255)
 	date_uploaded = models.DateField(auto_now_add=True)
 	date_modified = models.DateField(auto_now=True)

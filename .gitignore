@@ -102,3 +102,14 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Media directory
+personal_site/MEDIA/*
+personal_site/MEDIA/images/*
+personal_site/images/*
+personal_site/MEDIA/images/cover_photos/*
+!personal_site/MEDIA/default_image.png
+!personal_site/MEDIA/.gitkeep
+!personal_site/MEDIA/images/.gitkeep
+!personal_site/static/images/image_1.jpg
+!personal_site/MEDIA/images/cover_photos/.gitkeep
