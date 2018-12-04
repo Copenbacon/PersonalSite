@@ -106,3 +106,10 @@ class EntryTestCase(TestCase):
 		album1.entries.add(entry1)
 		entry1.save()
 		self.assertTrue(album1.entries.count() == 1)
+
+	def test_album_has_no_owner_at_instantiation(self):
+		"""Album should have no owner when started."""
+		album1 = Album.objects.first()
+		album1.entries.add(Entry.objects.first())
+		self.assertFalse(album1.owner)
+
