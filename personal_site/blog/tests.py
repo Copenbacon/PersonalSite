@@ -88,3 +88,21 @@ class EntryTestCase(TestCase):
 		entry1.author = user1
 		entry1.save()
 		self.assertTrue(user1.profile == entry1.author.profile)
+
+	def test_album_exists(self):
+		"""Album should exist."""
+		album1 = Album.objects.first()
+		self.assertTrue("Some Album" in album1.description)
+
+	def test_album_has_cover_image(self):
+		"""Album should have cover image."""
+		album1 = Album.objects.first()
+		self.assertTrue(album1.cover_image)
+
+	def test_album_has_entry(self):
+		"""Album should have an entry after adding one."""
+		album1 = Album.objects.first()
+		entry1 = Entry.objects.first()
+		album1.entries.add(entry1)
+		entry1.save()
+		self.assertTrue(album1.entries.count() == 1)
