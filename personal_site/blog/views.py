@@ -62,73 +62,73 @@ class AlbumIdView(TemplateView):
 
 
 class AddEntryView(LoginRequiredMixin, CreateView):
-    """A class based view to add an entry."""
+	"""A class based view to add an entry."""
 
-    model = Entry
-    form_class = EntryForm
-    template_name = 'blog/add_entry.html'
-    login_url = reverse_lazy("login")
+	model = Entry
+	form_class = EntryForm
+	template_name = 'blog/add_entry.html'
+	login_url = reverse_lazy("login")
 
-    def form_valid(self, form):
-        """Execute if form is valid."""
-        entry = form.save()
-        entry.author = self.request.user.profile
-        entry.date_uploaded = timezone.now()
-        entry.date_modified = timezone.now()
-        if entry.published == "public":
-            entry.published_date = timezone.now()
-        entry.save()
-        return redirect('library')
+	def form_valid(self, form):
+		"""Execute if form is valid."""
+		entry = form.save()
+		entry.author = self.request.user.profile
+		entry.date_uploaded = timezone.now()
+		entry.date_modified = timezone.now()
+		if entry.published == "public":
+			entry.published_date = timezone.now()
+		entry.save()
+		return redirect('library')
 
 
 class AddAlbumView(LoginRequiredMixin, CreateView):
-    """A class based view to add an Album."""
+	"""A class based view to add an Album."""
 
-    model = Album
-    form_class = AlbumForm
-    template_name = 'blog/add_album.html'
-    login_url = reverse_lazy("login")
+	model = Album
+	form_class = AlbumForm
+	template_name = 'blog/add_album.html'
+	login_url = reverse_lazy("login")
 
-    def form_valid(self, form):
-        """Execute if form is valid."""
-        album = form.save()
-        album.owner = self.request.user.profile
-        album.date_created = timezone.now()
-        album.save()
-        return redirect('library')
+	def form_valid(self, form):
+		"""Execute if form is valid."""
+		album = form.save()
+		album.owner = self.request.user.profile
+		album.date_created = timezone.now()
+		album.save()
+		return redirect('library')
 
 
 class EntryEditView(LoginRequiredMixin, UpdateView):
-    """A class based view to edit an entry."""
+	"""A class based view to edit an entry."""
 
-    model = Entry
-    form_class = PhotoForm
-    template_name = 'blog/add_entry.html'
-    login_url = reverse_lazy("login")
+	model = Entry
+	form_class = PhotoForm
+	template_name = 'blog/add_entry.html'
+	login_url = reverse_lazy("login")
 
-    def form_valid(self, form):
-        """Execute if form is valid."""
-        entry = form.save()
-        entry.date_modified = timezone.now()
-        if entry.published == "public":
-            entry.published_date = timezone.now()
-        entry.save()
-        return redirect('library')
+	def form_valid(self, form):
+		"""Execute if form is valid."""
+		entry = form.save()
+		entry.date_modified = timezone.now()
+		if entry.published == "public":
+			entry.published_date = timezone.now()
+		entry.save()
+		return redirect('library')
 
 
 class AlbumEditView(LoginRequiredMixin, UpdateView):
-    """A class based view to edit an album."""
+	"""A class based view to edit an album."""
 
-    model = Album
-    form_class = AlbumForm
-    template_name = 'blog/add_album.html'
-    login_url = reverse_lazy("login")
+	model = Album
+	form_class = AlbumForm
+	template_name = 'blog/add_album.html'
+	login_url = reverse_lazy("login")
 
-    def form_valid(self, form):
-        """Execute if form is valid."""
-        album = form.save()
-        album.date_modified = timezone.now()
-        if album.published == "public":
-            album.published_date = timezone.now()
-        album.save()
-        return redirect('library')
+	def form_valid(self, form):
+		"""Execute if form is valid."""
+		album = form.save()
+		album.date_modified = timezone.now()
+		if album.published == "public":
+			album.published_date = timezone.now()
+		album.save()
+		return redirect('library')
