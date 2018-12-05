@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.shortcuts import redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from blog.models import Entry, Album
-# from blog.forms import PhotoForm, AlbumForm
+from blog.forms import EntryForm, AlbumForm
 from django.urls import reverse_lazy
 
 
@@ -78,7 +78,7 @@ class AddEntryView(LoginRequiredMixin, CreateView):
 		if entry.published == "public":
 			entry.published_date = timezone.now()
 		entry.save()
-		return redirect('library')
+		return redirect('entries')
 
 
 class AddAlbumView(LoginRequiredMixin, CreateView):
@@ -95,7 +95,7 @@ class AddAlbumView(LoginRequiredMixin, CreateView):
 		album.owner = self.request.user.profile
 		album.date_created = timezone.now()
 		album.save()
-		return redirect('library')
+		return redirect('entries')
 
 
 class EntryEditView(LoginRequiredMixin, UpdateView):
@@ -113,7 +113,7 @@ class EntryEditView(LoginRequiredMixin, UpdateView):
 		if entry.published == "public":
 			entry.published_date = timezone.now()
 		entry.save()
-		return redirect('library')
+		return redirect('entries')
 
 
 class AlbumEditView(LoginRequiredMixin, UpdateView):
@@ -131,4 +131,4 @@ class AlbumEditView(LoginRequiredMixin, UpdateView):
 		if album.published == "public":
 			album.published_date = timezone.now()
 		album.save()
-		return redirect('library')
+		return redirect('entries')
