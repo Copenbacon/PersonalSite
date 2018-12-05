@@ -106,3 +106,31 @@ class EntryTestCase(TestCase):
 		album1.entries.add(entry1)
 		entry1.save()
 		self.assertTrue(album1.entries.count() == 1)
+
+	def test_album_has_no_owner_at_instantiation(self):
+		"""Album should have no owner when started."""
+		album1 = Album.objects.first()
+		album1.entries.add(Entry.objects.first())
+		self.assertFalse(album1.owner)
+
+	def test_album_can_store_an_owner(self):
+		"""Album should be assigned an owner."""
+		album1 = Album.objects.first()
+		entry1 = Entry.objects.first()
+		album1.entries.add(entry1)
+		user1 = User.objects.first()
+		entry1.author = user1
+		entry1.save()
+		album1.owner = user1.profile
+		self.assertTrue(album1.owner)
+
+	def test_album_owner_is_blogprofile(self):
+		"""Album should be assigned an owner."""
+		album1 = Album.objects.first()
+		entry1 = Entry.objects.first()
+		album1.entries.add(entry1)
+		user1 = User.objects.first()
+		entry1.author = user1
+		entry1.save()
+		album1.owner = user1.profile
+		self.assertTrue(album1.owner == entry1.author.profile)

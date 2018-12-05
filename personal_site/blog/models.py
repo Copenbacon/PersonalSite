@@ -1,7 +1,7 @@
 """Basic Blog Models. Entries and Albums."""
 from django.db import models
 from django.contrib.auth.models import User
-
+from blogprofile.models import BlogProfile
 
 PUBLISHED = [
     ('private', 'Private'),
@@ -61,7 +61,10 @@ class Album(models.Model):
 		choices=PUBLISHED,
 		default='private'
 	)
-
+	owner = models.ForeignKey(BlogProfile, related_name='albums',
+		blank=True,
+		null=True,
+		on_delete=models.CASCADE)
 	entries = models.ManyToManyField(
 		"Entry",
 		related_name="albums_of_entries",
