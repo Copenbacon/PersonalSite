@@ -25,8 +25,10 @@ from django.contrib import admin
 # from django.views.static import serve
 # from django.conf.urls.static import static
 from personal_site.views import HomeView
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', HomeView, name='home')
-]
+    url(r'^$', HomeView, name='home'),
+    url(r'^blog/', include("blog.urls"))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -9,4 +9,4 @@ from django.shortcuts import render
 def HomeView(request):
     """A class based view for home page."""
 
-    return render(request, "home.html")
+    return render(request, "personal_site/home.html")
