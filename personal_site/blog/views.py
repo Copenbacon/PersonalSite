@@ -1,4 +1,5 @@
 """Views for blog app."""
+
 from django.views.generic import TemplateView, CreateView, UpdateView
 from django.utils import timezone
 from django.shortcuts import redirect

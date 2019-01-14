@@ -16,12 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf import settings
 from django.contrib import admin
-# from django.contrib.auth.views import (
-#     logout,
-#     password_reset,
-#     password_reset_done,
-#     password_reset_confirm,
-#     password_reset_complete)
+from django.contrib.auth import login, logout
 # from django.views.static import serve
 # from django.conf.urls.static import static
 from personal_site.views import HomeView
@@ -30,5 +25,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView, name='home'),
+    url(r'^login/$', login, name='login'),
+    url(r'^logout/$', logout, name='logout'),
     url(r'^blog/', include("blog.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
