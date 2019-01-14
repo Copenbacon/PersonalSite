@@ -42,7 +42,6 @@ ul#nav-bar {
   padding: 0;
 }
 
-
 .nav-items {
   display: inline;
   color: rgb(122, 122, 122);
@@ -69,6 +68,10 @@ ul#nav-bar {
 
 .nav-items:hover {
   background-color: rgb(0, 0, 0);
+}
+
+.nav-items-a{
+  text-decoration: none;
 }
 
 #banner {

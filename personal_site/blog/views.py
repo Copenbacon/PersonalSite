@@ -19,6 +19,39 @@ class EntryView(TemplateView):
 		return {'entries': entries}
 
 
+class FitnessEntryView(TemplateView):
+	"""A class based view for Multiple Entries."""
+
+	template_name = "blog/fitness/entry.html"
+
+	def get_context_data(self):
+		"""Extending get_context_data method to add data."""
+		entries = Entry.objects.filter(published='public').all()
+		return {'entries': entries}
+
+
+class MaintenanceEntryView(TemplateView):
+	"""A class based view for Multiple Entries."""
+
+	template_name = "blog/maintenance/entry.html"
+
+	def get_context_data(self):
+		"""Extending get_context_data method to add data."""
+		entries = Entry.objects.filter(published='public').all()
+		return {'entries': entries}
+
+
+class RecipeEntryView(TemplateView):
+	"""A class based view for Multiple Entries."""
+
+	template_name = "blog/recipes/entry.html"
+
+	def get_context_data(self):
+		"""Extending get_context_data method to add data."""
+		entries = Entry.objects.filter(published='public').all()
+		return {'entries': entries}
+
+
 class AlbumView(TemplateView):
 	"""Class based view for Album view."""
 

@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href='{% static "base.css" %}'>
-    <title>Wireframe Exercise</title>
+    <title>A Clever Title</title>
   </head>
 
   <body>
@@ -14,10 +14,10 @@
       <nav id="header-content">
         <img id="logo" src="http://placehold.it/200x70/000000/707070" alt="logo">
         <ul id="nav-bar">
-          <li class="nav-items">Nav Item 1</li>
-          <li class="nav-items">Nav Item 2</li>
-          <li class="nav-items">Nav Item 3</li>
-          <li class="nav-items">Nav Item 4</li>
+          <a href="{% url 'fitness_entries' %}" class="nav-items-a"><li class="nav-items">Fitness</li></a>
+          <a href="{% url 'recipe_entries' %}" class="nav-items-a"><li class="nav-items">Recipes</li></a>
+          <a href="{% url 'maintenance_entries' %}" class="nav-items-a"><li class="nav-items">Maintenance</li></a>
+          <a href="{% url 'entries' %}" class="nav-items-a"><li class="nav-items">About</li></a>
         </ul>
       </nav>
     </header>
