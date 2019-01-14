@@ -12,12 +12,12 @@
   <body>
     <header id="header">
       <nav id="header-content">
-        <img id="logo" src="http://placehold.it/200x70/000000/707070" alt="logo">
+        <a href="{% url 'home' %}"><img id="logo" src="http://placehold.it/200x70/000000/707070" alt="logo"></a>
         <ul id="nav-bar">
           <a href="{% url 'fitness_entries' %}" class="nav-items-a"><li class="nav-items">Fitness</li></a>
           <a href="{% url 'recipe_entries' %}" class="nav-items-a"><li class="nav-items">Recipes</li></a>
           <a href="{% url 'maintenance_entries' %}" class="nav-items-a"><li class="nav-items">Maintenance</li></a>
-          <a href="{% url 'entries' %}" class="nav-items-a"><li class="nav-items">About</li></a>
+          <a href="{% url 'entries' %}" class="nav-items-a"><li class="nav-items">Everything</li></a>
         </ul>
       </nav>
     </header>

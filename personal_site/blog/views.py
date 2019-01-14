@@ -26,7 +26,7 @@ class FitnessEntryView(TemplateView):
 
 	def get_context_data(self):
 		"""Extending get_context_data method to add data."""
-		entries = Entry.objects.filter(published='public').all()
+		entries = Entry.objects.filter(published='public', category='fitness').all()
 		return {'entries': entries}
 
 
@@ -37,7 +37,7 @@ class MaintenanceEntryView(TemplateView):
 
 	def get_context_data(self):
 		"""Extending get_context_data method to add data."""
-		entries = Entry.objects.filter(published='public').all()
+		entries = Entry.objects.filter(published='public', category='maintenance').all()
 		return {'entries': entries}
 
 
@@ -48,7 +48,7 @@ class RecipeEntryView(TemplateView):
 
 	def get_context_data(self):
 		"""Extending get_context_data method to add data."""
-		entries = Entry.objects.filter(published='public').all()
+		entries = Entry.objects.filter(published='public', category='recipes').all()
 		return {'entries': entries}
 
 
