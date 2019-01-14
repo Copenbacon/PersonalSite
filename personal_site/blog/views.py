@@ -102,7 +102,7 @@ class EntryEditView(LoginRequiredMixin, UpdateView):
 	"""A class based view to edit an entry."""
 
 	model = Entry
-	form_class = PhotoForm
+	form_class = EntryForm
 	template_name = 'blog/add_entry.html'
 	login_url = reverse_lazy("login")
 

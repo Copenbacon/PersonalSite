@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href='{% static "base.css" %}'>
+    <title>Wireframe Exercise</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <nav id="header-content">
+        <img id="logo" src="http://placehold.it/200x70/000000/707070" alt="logo">
+        <ul id="nav-bar">
+          <li class="nav-items">Nav Item 1</li>
+          <li class="nav-items">Nav Item 2</li>
+          <li class="nav-items">Nav Item 3</li>
+          <li class="nav-items">Nav Item 4</li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block body %}{% endblock %}
+
+
+  <footer></footer>
+
+</html>

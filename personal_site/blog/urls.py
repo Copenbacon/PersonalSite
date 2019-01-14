@@ -1,7 +1,7 @@
 """Blog URL Configuration."""
 
 from django.conf.urls import url
-from imager_images.views import EntryView, AlbumView, \
+from blog.views import EntryView, AlbumView, \
     EntryIdView, AlbumIdView, AddEntryView, AddAlbumView, EntryEditView, AlbumEditView
 
 urlpatterns = [
