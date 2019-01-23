@@ -1,7 +1,15 @@
 {% extends "personal_site/base.html" %}
 
 {% block title %}
+	{{ entry.title }}
 {% endblock %}
 
 {% block body %}
+		
+		<p>{{ entry.title }}</p>
+		<a href="{{ entry.image_file.url }}">
+		<img src="{{ entry.image_file.url }}"></a>
+		<p>{{ entry.description }}</p>
+		<p>{{ entry.text }} </p>
+
 {% endblock %}
