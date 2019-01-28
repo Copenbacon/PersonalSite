@@ -1,7 +1,18 @@
 {% extends "personal_site/base.html" %}
 
 {% block title %}
+Add Entry
 {% endblock %}
 
+
+
 {% block body %}
+                      
+<h3> Add an entry </h3>
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Save</button>
+</form>
+
 {% endblock %}
