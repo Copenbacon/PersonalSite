@@ -4,11 +4,13 @@
 {% endblock %}
 
 {% block body %}
-	{% for entry in entries %}
-		<li>
-		<a href="{% url 'individual_entry' pk=entry.pk %}">
-		<img src="{{ entry.image_file.url }}" class="entry-page-main-img"></a>
-		<p>{{ entry.description }}</p>
-		</li>
-	{% endfor %}
+	<ul class="entry-ul">
+		{% for entry in entries %}
+			<li class="entries-li">
+			<a href="{% url 'individual_entry' pk=entry.pk %}">
+			<img src="{{ entry.image_file.url }}" class="entries-page-main-img"></a>
+			<p>{{ entry.description }}</p>
+			</li>
+		{% endfor %}
+	</ul>
 {% endblock %}
