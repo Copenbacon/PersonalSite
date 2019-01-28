@@ -74,6 +74,28 @@ ul#nav-bar {
   text-decoration: none;
 }
 
+.entry-page-main-img{
+  width: 30%;
+}
+
+.entry-ul{
+  width: 85%;
+  text-align: center;
+}
+
+.entries-li{
+  display: inline-block;
+  width: 30%;
+  list-style-type: none;
+  vertical-align: top;
+}
+
+.entries-page-main-img {
+  width: 95%;
+  max-height: 200px;
+  overflow-y: hidden;
+}
+
 #banner {
   max-width: 960px;
   padding-top: 1.5%;
