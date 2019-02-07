@@ -6,12 +6,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href='{% static "base.css" %}'>
+    <link rel="stylesheet" href='{% static "layout.css" %}'>
+    <link rel="stylesheet" href='{% static "modules.css" %}'>
     <title>{% block title %}{% endblock %}</title> 
   </head>
 
   <body>
     <header id="header">
-      <nav id="header-content">
+      <span id="nav-icon"> <span id="nav-icon-700">Menu</span> <nav id="header-content"> </span> 
         <a href="{% url 'home' %}"><img id="logo" src="http://placehold.it/200x70/000000/707070" alt="logo"></a>
         <ul id="nav-bar">
           <a href="{% url 'fitness_entries' %}" class="nav-items-a"><li class="nav-items">Fitness</li></a>

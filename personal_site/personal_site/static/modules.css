@@ -1,0 +1,305 @@
+#nav-icon{
+	display: block;
+	color: black;
+}
+
+nav#header-content{
+	display: none;
+}
+
+#nav-icon:hover nav#header-content {
+	display: block;
+}
+
+img#logo{
+  display: none;
+}
+
+.entry-page-main-img{
+  width: 70%;
+}
+
+.entry-ul{
+  width: 85%;
+  text-align: center;
+}
+
+.entries-li{
+  display: inline-block;
+  width: 75%;
+  list-style-type: none;
+  vertical-align: top;
+}
+
+.entries-page-main-img {
+  width: 95%;
+  max-height: 200px;
+  overflow-y: hidden;
+}
+
+#banner {
+	width:100%;
+	margin: 0;
+}
+
+#banner img {
+	width: 100%;
+}
+
+#sub-banner {
+  width: 100%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+.sub-banner-li {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0;
+}
+
+#featured-section-banner {
+  width: 100%;
+  margin: 0;
+  display: block;
+  padding-bottom: 1.5%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+#featured-section-image{
+  width: 100%;
+  display: block;
+}
+
+div#featured-section-div {
+  display: block;
+}
+
+h3#featured-section-h3 {
+  margin: 0;
+}
+
+p#featured-section-verbiage {
+  display: inline-flex;
+  font-style: italic;
+}
+
+#call-to-action {
+  width: 175px;
+  height: 41px;
+  background-color: black;
+  color: white;
+  font-size: 115%;
+  display: block;
+  border: none;
+  transition: background-color 350ms ease;
+}
+
+#call-to-action:hover {
+  background-color: rgb(0, 29, 152);
+}
+
+@media screen and (min-width:700px) {
+
+	#nav-icon-700{
+		display: none;
+	}
+
+	header#header {
+	  background-color: #444444;
+	  display: block;
+	  width: 100%;
+	  margin: 0;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	}
+
+	nav#header-content{
+	  display: inherit;
+	  width: 90%;
+	  top: 1%;
+	  vertical-align: center;
+	}
+
+	img#logo{
+	  display: inline;
+	  vertical-align: center;
+	}
+
+	ul#nav-bar {
+	  display:inline-block;
+	  width: 85%;
+	  margin: auto;
+	  top: 4%;
+	  position: fixed;
+	  padding: 0;
+	}
+
+	.nav-items {
+	  display: inline;
+	  color: rgb(122, 122, 122);
+	  transition: background-color 350ms ease;
+	  padding: 15px;
+	  border-radius: 10px;
+	}
+
+	.nav-items:nth-child(1){
+	  margin-left: 2.5%;  
+	}
+
+	.nav-items:nth-child(2){
+	  margin-left: 10%;
+	}
+
+	.nav-items:nth-child(3){
+	  margin-left: 10%;
+	}
+
+	.nav-items:nth-child(4){
+	  margin-left: 10%;
+	}
+
+	.nav-items:hover {
+	  background-color: rgb(0, 0, 0);
+	}
+
+	.nav-items-a{
+	  text-decoration: none;
+	}
+
+	.entry-page-main-img{
+	  width: 30%;
+	}
+
+	.entry-ul{
+	  width: 85%;
+	  text-align: center;
+	}
+
+	.entries-li{
+	  display: inline-block;
+	  width: 30%;
+	  list-style-type: none;
+	  vertical-align: top;
+	}
+
+	.entries-page-main-img {
+	  width: 95%;
+	  max-height: 200px;
+	  overflow-y: hidden;
+	}
+
+	#banner {
+	  max-width: 960px;
+	  min-width: 700px;
+	  width: 70%;
+	  padding-top: 1.5%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	#banner img{
+		align-content: center;
+	}
+
+	#sub-banner{
+	  width: 960px;
+	  margin: 0 auto;
+	  padding-top: 1.5%;
+	  padding-left: 0;
+	  padding-bottom: 1.5%;
+	}
+
+	.sub-banner-li {
+	  display: inline;
+	  margin: auto;
+	}
+
+	#sub-banner-one {
+	  float: left;
+	}
+
+	#sub-banner-two {
+	  float: none;
+	  margin: auto;
+	  padding-left: 3.25%;
+	}
+
+	#sub-banner-three {
+	  float: right;
+	}
+
+	#featured-section-banner {
+	  width: 960px;
+	  /*margin-left: 19.35%;*/
+	  margin: 2% 0;
+	  display: block;
+	  padding-bottom: 1.5%;
+	}
+
+	#featured-section-image{
+	  width: 45%;
+	  display: inline-block;
+	}
+
+	div#featured-section-div {
+	  height: 359px;
+	  display: inline-block;
+	  margin-left: 2.5%;
+	  position: absolute;
+	}
+
+	h3#featured-section-h3 {
+	  margin: 0;
+	}
+
+	p#featured-section-verbiage {
+	  overflow: hidden;
+	  width: 440px;
+	  height: 85%;
+	  display: inline-flex;
+	  font-style: italic;
+	  /*padding-right: 30%;*/
+	}
+
+	p#featured-section-verbiage:hover {
+	  overflow-y: scroll;
+	  margin-right: 10px;
+	}
+
+	#call-to-action {
+	  width: 175px;
+	  height: 41px;
+	  background-color: black;
+	  color: white;
+	  font-size: 115%;
+	  display: block;
+	  border: none;
+	  transition: background-color 350ms ease;
+	}
+
+	#call-to-action:hover {
+	  background-color: rgb(0, 29, 152);
+	}
+
+	footer {
+	  background-color: #444444;
+	  width: 101%;
+	  height: 100px;
+	  overflow-x: hidden;
+	  position: absolute;
+	  margin-left: -1%;
+	}
+
+}
+
+@media screen and (min-width:855px) {
+
+}
