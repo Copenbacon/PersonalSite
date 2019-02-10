@@ -1,17 +1,62 @@
-#nav-icon{
-	display: block;
-	color: black;
-}
-
-nav#header-content{
+header#header{
 	display: none;
 }
 
-#nav-icon:hover nav#header-content {
+#mobilenav-icon{
 	display: block;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	padding: 2%;
 }
 
-img#logo{
+ul#mobilenav-bar {
+  width: 25%;
+  margin: 0;
+  top: 10%;
+  position: fixed;
+  padding: 0;
+  background-color: gray;
+  list-style-type: none;
+}
+
+.mobilenav-items{
+	list-style-type: none;
+	background-color: gray;
+	padding: 3%;
+}
+
+.mobilenav-items:hover {
+  background-color: rgba(76, 131, 127, .7);
+  transition: background-color 350ms ease;
+  /*list-style-type: none;*/
+}
+
+.mobilenav-items-a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+}
+
+nav#mobileheader-content{
+	display: none;
+	position: fixed;
+	top: 5%;
+}
+
+#mobilenav-icon {
+	position: fixed;
+	top: 1%;
+	background-color: gray;
+}
+
+#mobilenav-icon:hover nav#mobileheader-content {
+	display: block;
+	top: 5%;
+}
+
+img#mobilelogo{
   display: none;
 }
 
@@ -91,7 +136,8 @@ p#featured-section-verbiage {
 }
 
 #call-to-action {
-  width: 175px;
+  margin-left: 22%;
+  width: 55%;
   height: 41px;
   background-color: black;
   color: white;
@@ -107,8 +153,13 @@ p#featured-section-verbiage {
 
 @media screen and (min-width:700px) {
 
+	#mobileheader{
+		display: none;
+	}
+
 	#nav-icon-700{
 		display: none;
+		position: fixed;
 	}
 
 	header#header {
@@ -276,7 +327,7 @@ p#featured-section-verbiage {
 
 	#call-to-action {
 	  width: 175px;
-	  height: 41px;
+	  margin-left: 0;
 	  background-color: black;
 	  color: white;
 	  font-size: 115%;
