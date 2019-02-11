@@ -12,8 +12,7 @@ header#header{
 
 ul#mobilenav-bar {
   width: 25%;
-  margin: 0;
-  top: 10%;
+  margin-top: 1%;
   position: fixed;
   padding: 0;
   background-color: gray;
@@ -29,7 +28,6 @@ ul#mobilenav-bar {
 .mobilenav-items:hover {
   background-color: rgba(76, 131, 127, .7);
   transition: background-color 350ms ease;
-  /*list-style-type: none;*/
 }
 
 .mobilenav-items-a {
@@ -175,20 +173,17 @@ p#featured-section-verbiage {
 	nav#header-content{
 	  display: inherit;
 	  width: 90%;
-	  top: 1%;
-	  vertical-align: center;
 	}
 
 	img#logo{
 	  display: inline;
-	  vertical-align: center;
+	  width: 16%;
 	}
 
 	ul#nav-bar {
 	  display:inline-block;
 	  width: 85%;
-	  margin: auto;
-	  top: 4%;
+	  margin-top: 2%;
 	  position: fixed;
 	  padding: 0;
 	}
@@ -197,7 +192,7 @@ p#featured-section-verbiage {
 	  display: inline;
 	  color: rgb(122, 122, 122);
 	  transition: background-color 350ms ease;
-	  padding: 15px;
+	  padding: 10px;
 	  border-radius: 10px;
 	}
 
@@ -261,47 +256,37 @@ p#featured-section-verbiage {
 	}
 
 	#sub-banner{
-	  width: 960px;
+	  width: 100%;
 	  margin: 0 auto;
 	  padding-top: 1.5%;
-	  padding-left: 0;
+/*	  padding-left: 0;*/
 	  padding-bottom: 1.5%;
 	}
 
 	.sub-banner-li {
-	  display: inline;
+	  display: block;
 	  margin: auto;
-	}
-
-	#sub-banner-one {
-	  float: left;
-	}
-
-	#sub-banner-two {
-	  float: none;
-	  margin: auto;
-	  padding-left: 3.25%;
-	}
-
-	#sub-banner-three {
-	  float: right;
+	  align-content: center;
 	}
 
 	#featured-section-banner {
-	  width: 960px;
-	  /*margin-left: 19.35%;*/
-	  margin: 2% 0;
+	  width: 100%;
+	  min-height: 400px;
+	  margin: 0 auto;
+	  align-content: center;
 	  display: block;
 	  padding-bottom: 1.5%;
+	  text-align: left;
 	}
 
 	#featured-section-image{
 	  width: 45%;
+	  margin: 0 auto;
+	  margin-left: 2.5%;
 	  display: inline-block;
 	}
 
 	div#featured-section-div {
-	  height: 359px;
 	  display: inline-block;
 	  margin-left: 2.5%;
 	  position: absolute;
@@ -313,11 +298,9 @@ p#featured-section-verbiage {
 
 	p#featured-section-verbiage {
 	  overflow: hidden;
-	  width: 440px;
-	  height: 85%;
-	  display: inline-flex;
+	  width: 85%;
+	  max-height: 250px;
 	  font-style: italic;
-	  /*padding-right: 30%;*/
 	}
 
 	p#featured-section-verbiage:hover {
@@ -352,5 +335,23 @@ p#featured-section-verbiage {
 }
 
 @media screen and (min-width:855px) {
+
+	.nav-items {
+	  display: inline;
+	  color: rgb(122, 122, 122);
+	  transition: background-color 350ms ease;
+	  padding: 15px;
+	  border-radius: 10px;
+	}
+
+	#sub-banner {
+		text-align: center;
+	}
+
+	.sub-banner-li {
+	  display: inline;
+	  margin: 0 auto;
+	  align-content: center;
+	}
 
 }
