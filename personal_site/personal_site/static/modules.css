@@ -60,9 +60,12 @@ img#mobilelogo{
 
 .entry-page-main-img{
   width: 70%;
+  margin: auto 15%;
 }
 
 .entry-ul{
+  margin: auto;
+  margin-top: 10%;
   width: 85%;
   text-align: center;
 }
@@ -149,6 +152,15 @@ p#featured-section-verbiage {
   background-color: rgb(0, 29, 152);
 }
 
+.entry-page-description{
+	margin: 2% 5%;
+	text-align: center;
+}
+
+.entry-page-text{
+	margin: auto;
+}
+
 @media screen and (min-width:700px) {
 
 	#mobileheader{
@@ -221,7 +233,8 @@ p#featured-section-verbiage {
 	}
 
 	.entry-page-main-img{
-	  width: 30%;
+	  width: 40%;
+	  margin: auto 30%;
 	}
 
 	.entry-ul{

@@ -9,7 +9,7 @@
 		<p>{{ entry.title }}</p>
 		<a href="{{ entry.image_file.url }}">
 		<img src="{{ entry.image_file.url }}" class="entry-page-main-img"></a>
-		<p>{{ entry.description }}</p>
-		<p>{{ entry.text }} </p>
+		<p class="entry-page-description">{{ entry.description }}</p>
+		<p class="entry-page-text">{{ entry.text }} </p>
 
 {% endblock %}
